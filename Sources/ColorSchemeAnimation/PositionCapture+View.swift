@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-extension View {
-    public func capturePosition(position: @escaping (CGRect) -> ()) -> some View {
+public extension View {
+    func capturePosition(position: @escaping (CGRect) -> ()) -> some View {
         self.overlay(
             GeometryReader(content: { geometry in
                 let rect = geometry.frame(in: .global)

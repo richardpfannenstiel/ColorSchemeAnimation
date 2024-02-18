@@ -16,8 +16,8 @@ private struct CustomColorSchemeModifier: ViewModifier {
     }
 }
 
-extension View {
-    public func preferredColorScheme() -> some View {
+public extension View {
+    func preferredColorScheme() -> some View {
         self.modifier(CustomColorSchemeModifier())
     }
 }

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-extension EnvironmentValues {
-  public var customColorScheme: CustomColorScheme {
-      get { Storage.shared.currentColorScheme }
-  }
+public extension EnvironmentValues {
+    var customColorScheme: CustomColorScheme {
+        get { Storage.shared.currentColorScheme }
+    }
 }

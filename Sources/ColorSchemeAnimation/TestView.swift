@@ -23,14 +23,14 @@ struct TestView: View {
                     Text(colorScheme.rawValue)
                     HStack(spacing: 20) {
                         Text("System")
-                            .onTabChangeColorScheme(to: .system)
+                            .onTapChangeColorScheme(to: .system)
                             .capturePosition { position in
                                 startingPoint = position
                             }
                         Text("Light")
-                            .onTabChangeColorScheme(to: .light)
+                            .onTapChangeColorScheme(to: .light)
                         Text("Dark")
-                            .onTabChangeColorScheme(to: .dark)
+                            .onTapChangeColorScheme(to: .dark)
                     }.padding(.vertical)
                     Picker("Appearance", selection: $selectedTheme) {
                         ForEach(themes, id: \.self) {
@@ -46,7 +46,7 @@ struct TestView: View {
                         Image(systemName: colorScheme == .dark ? "sun.max.fill" : "moon.fill")
                             .resizable()
                             .frame(width: 25, height: 25)
-                            .onTabChangeColorScheme(to: colorScheme == .dark ? .light : .dark)
+                            .onTapChangeColorScheme(to: colorScheme == .dark ? .light : .dark)
                     })
             }
             .tabItem {

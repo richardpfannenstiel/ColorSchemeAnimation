@@ -23,11 +23,11 @@ struct ExampleView: View {
             }
             HStack(spacing: 20) {
                 Text("System")
-                    .onTabChangeColorScheme(to: .system)
+                    .onTapChangeColorScheme(to: .system)
                 Text("Light")
-                    .onTabChangeColorScheme(to: .light)
+                    .onTapChangeColorScheme(to: .light)
                 Text("Dark")
-                    .onTabChangeColorScheme(to: .dark)
+                    .onTapChangeColorScheme(to: .dark)
             }.preferredColorScheme()
         }
     }
