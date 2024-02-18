@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class ColorSchemeAnimation {
+public class ColorSchemeAnimation {
     
     /// Changes the color scheme of the application.
     ///

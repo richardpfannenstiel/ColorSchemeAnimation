@@ -33,7 +33,7 @@ private struct ColorSchemeToggle: ViewModifier {
 }
 
 extension View {
-    func onTabChangeColorScheme(to scheme: CustomColorScheme, animationDuration: TimeInterval = 1) -> some View {
+    public func onTabChangeColorScheme(to scheme: CustomColorScheme, animationDuration: TimeInterval = 1) -> some View {
         self.modifier(ColorSchemeToggle(requestedColorScheme: scheme, animationDuration: animationDuration))
     }
 }
