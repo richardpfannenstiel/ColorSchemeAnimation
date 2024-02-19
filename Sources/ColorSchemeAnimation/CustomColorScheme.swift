@@ -14,7 +14,7 @@ import SwiftUI
 /// The color scheme can be changed through the functions ``ColorSchemeAnimation/ColorSchemeAnimation/changeColorScheme(to:)``,
 /// ``ColorSchemeAnimation/ColorSchemeAnimation/changeColorScheme(to:from:animationDuration:)-30tda`` or
 /// ``ColorSchemeAnimation/ColorSchemeAnimation/changeColorScheme(to:from:animationDuration:)-1hc4k``.
-/// SwiftUI will redraw  views that depend on the environment value.
+/// SwiftUI will redraw views that depend on the environment value.
 /// In the following example, the view will automatically update its text if the custom color scheme is changed.
 ///
 /// ```swift
@@ -43,13 +43,17 @@ import SwiftUI
 ///     }
 /// }
 /// ```
-
 public enum CustomColorScheme: String {
     
     static let DEFAULT = CustomColorScheme.system
     
+    /// The color scheme that corresponds to the system's dark mode settings.
     case system = "system"
+    
+    /// The color scheme that corresponds to a light appearance.
     case light = "light"
+    
+    /// The color scheme that corresponds to a dark appearance.
     case dark = "dark"
     
     var scheme: ColorScheme? {

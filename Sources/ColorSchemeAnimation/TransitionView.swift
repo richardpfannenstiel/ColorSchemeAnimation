@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TransitionView: View {
     
-    let previousImage: UIImage
-    let currentImage: UIImage
+    let old: UIImage
+    let new: UIImage
     let animationStartingPoint: CGRect
     let animationDuration: TimeInterval
     
@@ -18,11 +18,11 @@ struct TransitionView: View {
     
     var body: some View {
         ZStack {
-            Image(uiImage: previousImage)
+            Image(uiImage: old)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: UIScreen.current?.bounds.width, height: UIScreen.current?.bounds.height)
-            Image(uiImage: currentImage)
+            Image(uiImage: new)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: UIScreen.current?.bounds.width, height: UIScreen.current?.bounds.height)

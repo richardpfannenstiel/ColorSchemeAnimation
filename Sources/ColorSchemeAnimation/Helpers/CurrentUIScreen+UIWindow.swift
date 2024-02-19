@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension UIWindow {
+    
+    /// Provides static access to the device's current user interface window.
     static var current: UIWindow? {
         for scene in UIApplication.shared.connectedScenes {
             guard let windowScene = scene as? UIWindowScene else { continue }
@@ -20,6 +22,8 @@ extension UIWindow {
 }
 
 extension UIScreen {
+    
+    /// Provides static access to the device's main interface screen including its dimensions.
     static var current: UIScreen? {
         UIWindow.current?.screen
     }

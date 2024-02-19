@@ -8,6 +8,11 @@
 import UIKit
 
 extension UIView {
+    
+    /// Captures the contents of a ``UIKit/UIView``  in a ``UIKit/UIImage``.
+    ///
+    /// - Parameter size: The preferred size of the requested image.
+    /// - Returns: A screenshot of the view.
     func image(_ size: CGSize) -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: size)
         return renderer.image { _ in
